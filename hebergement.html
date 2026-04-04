@@ -40,6 +40,16 @@
         margin-top: 20px;
         text-align: left;
       }
+      /* Style pour assortir le formulaire à vos couleurs */
+      .form-control, .form-select {
+        border: 1px solid #722031;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #722031;
+      }
+      .form-control:focus, .form-select:focus {
+        border-color: #722031;
+        box-shadow: 0 0 0 0.25rem rgba(114, 32, 49, 0.25);
+      }
     </style>
     <title>Hébergements - Marie et Edouard</title>
   </head>
@@ -50,15 +60,73 @@
 
       <div class="container text-center">
         <h1 class="names-title" style="font-size: 4rem;">Hébergements</h1>
-        <p class="fs-5 fst-italic">Voici quelques adresses pour dormir près du domaine.</p>
+        <p class="fs-5 fst-italic">Retrouvez ci-dessous les informations sur les logements et faites-nous part de vos besoins.</p>
       </div>
 
-      <div class="container">
+      <div class="container pb-5">
+        
         <div class="content-box shadow-sm">
-            <h3>Hôtel de la Gare</h3>
-            <p>Situé à 10 minutes du domaine. <br>
-            <i>Mentionnez que vous venez pour notre mariage lors de la réservation.</i></p>
-            <a href="#" target="_blank" class="td-buttons" style="font-size: 0.9rem;">Voir le site</a>
+            <h3>Les logements au Domaine de Sarson</h3>
+            <p>Le domaine dispose de plusieurs types de chambres (doubles, familiales, dortoirs). Les places étant limitées, nous essaierons de répartir tout le monde au mieux !</p>
+            <p><strong>Tarifs indicatifs :</strong><br>
+            - Chambre double : 90€ / nuit<br>
+            - Lit en dortoir : 35€ / nuit</p>
+            <p><i>Si le domaine est complet, nous vous redirigerons vers des gîtes partenaires situés à moins de 5 minutes.</i></p>
+        </div>
+
+        <div class="content-box shadow-sm mt-4">
+            <h3 class="names-title text-center mt-0" style="font-size: 3rem;">Demande de réservation</h3>
+            <p class="text-center mb-4">Remplissez ce formulaire pour nous indiquer ce que vous souhaitez. Nous vous confirmerons votre logement très vite !</p>
+            
+            <form action="https://formspree.io/f/VOTRE_CODE_ICI" method="POST">
+                
+                <div class="mb-3">
+                    <label for="noms" class="form-label fw-bold">Noms et Prénoms</label>
+                    <input type="text" class="form-control" id="noms" name="noms" placeholder="Ex: Jean et Sophie Dupont" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label fw-bold">Adresse Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="telephone" class="form-label fw-bold">Téléphone</label>
+                        <input type="tel" class="form-control" id="telephone" name="telephone" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="chambre" class="form-label fw-bold">Type de chambre souhaité</label>
+                    <select class="form-select" id="chambre" name="chambre" required>
+                        <option value="" selected disabled>Choisissez une option...</option>
+                        <option value="Chambre double">Chambre double (1 grand lit)</option>
+                        <option value="Chambre lits jumeaux">Chambre lits jumeaux (2 lits simples)</option>
+                        <option value="Chambre familiale">Chambre familiale (parents + enfants)</option>
+                        <option value="Dortoir">Lit simple en dortoir</option>
+                        <option value="Je me débrouille">Je gère mon logement moi-même</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="nuits" class="form-label fw-bold">Nuits concernées</label>
+                    <select class="form-select" id="nuits" name="nuits" required>
+                        <option value="" selected disabled>Choisissez une option...</option>
+                        <option value="Samedi soir uniquement">Samedi soir uniquement</option>
+                        <option value="Vendredi et Samedi">Vendredi et Samedi (2 nuits)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-bold">Message ou remarque particulière</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Besoin d'un lit parapluie ? Des personnes à mobilité réduite ? Dites-nous tout !"></textarea>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="td-buttons" style="cursor: pointer; background-color: #FCE8EB;">Envoyer ma demande</button>
+                </div>
+            </form>
+
         </div>
       </div>
   </body>
