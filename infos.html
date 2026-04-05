@@ -50,6 +50,24 @@
       .timeline-event {
         font-size: 1.1rem;
       }
+      
+      /* --- LE STYLE POUR VOS TACHES DE COULEUR --- */
+      .swatch {
+        width: 45px;
+        height: 80px;
+        margin: 15px;
+        /* Crée une forme organique style "coup de pinceau" */
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        opacity: 0.85;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+      }
+      /* On penche un peu les taches pour faire naturel */
+      .swatch:nth-child(odd) {
+        transform: rotate(-12deg);
+      }
+      .swatch:nth-child(even) {
+        transform: rotate(8deg);
+      }
     </style>
     <title>Informations Pratiques - Marie et Edouard</title>
   </head>
@@ -94,8 +112,12 @@
         </div>
 
         <div class="content-box shadow-sm mt-4 text-center">
-            <h3 class="names-title mt-0" style="font-size: 3rem;">Code Couleur</h3>
-            <p class="fs-5 mt-3">Pour être en harmonie avec l'esprit de notre mariage, nous serions ravis si vous pouviez intégrer une touche de <strong>[VOTRE COULEUR ICI]</strong> à votre tenue !</p>
+            <h3 class="names-title mt-0" style="font-size: 3rem;">Les couleurs s'invitent à la fête</h3>
+            <p class="fs-5 mt-3">Pour être en harmonie avec l'esprit de notre mariage, nous serions ravis si vous pouviez intégrer une de ces touches de couleur à votre tenue !</p>
+            
+            <div class="d-flex flex-wrap justify-content-center mt-4 mb-3" style="max-width: 400px; margin: auto;">
+                <div class="swatch" style="background-color: #E2987E;"></div> <div class="swatch" style="background-color: #C12A62;"></div> <div class="swatch" style="background-color: #EB7C38;"></div> <div class="swatch" style="background-color: #CFD945;"></div> <div class="swatch" style="background-color: #C0684B;"></div> <div class="swatch" style="background-color: #E2E693;"></div> <div class="swatch" style="background-color: #B15E8F;"></div> <div class="swatch" style="background-color: #D6A4B8;"></div> </div>
+
             <p class="fst-italic text-muted">Une cravate, une robe, une pochette ou un accessoire... laissez parler votre imagination.</p>
         </div>
 
